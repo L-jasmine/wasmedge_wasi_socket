@@ -370,10 +370,9 @@
 <span id="363">363</span>
 <span id="364">364</span>
 <span id="365">365</span>
-</pre><pre class="rust"><code><span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">executor</span>;
-<span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">poll</span>;
+</pre><pre class="rust"><code><span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">poll</span>;
 <span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">socket</span>;
-<span class="kw">pub</span> <span class="kw">mod</span> <span class="ident">wasi_poll</span>;
+<span class="kw">mod</span> <span class="ident">wasi_poll</span>;
 <span class="kw">pub</span> <span class="kw">use</span> <span class="ident">socket::WasiAddrinfo</span>;
 <span class="kw">pub</span> <span class="kw">use</span> <span class="ident">std::net</span>::{<span class="ident">IpAddr</span>, <span class="ident">Ipv4Addr</span>, <span class="ident">Shutdown</span>, <span class="ident">SocketAddr</span>, <span class="ident">ToSocketAddrs</span>};
 <span class="kw">use</span> <span class="ident">std::pin::Pin</span>;
@@ -715,6 +714,7 @@
         }
 
         <span class="kw">let</span> <span class="ident">addr</span> <span class="op">=</span> <span class="kw">match</span> <span class="ident">sockaddr</span>.<span class="ident">family</span> {
+            <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">feature</span><span class="op">=</span><span class="string">&quot;wasmedge_0_10&quot;</span>)]</span>
             <span class="ident">socket::AddressFamily::Unspec</span> =&gt; {
                 <span class="comment">//unimplemented!(&quot;not support unspec&quot;)</span>
                 <span class="kw">continue</span>;
@@ -736,5 +736,5 @@
     <span class="prelude-val">Ok</span>(<span class="ident">r_addrs</span>)
 }
 </code></pre></div>
-</section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="wasmedge_wasi_socket" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.63.0-nightly (cd282d7f7 2022-05-18)" ></div>
+</section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="wasmedge_wasi_socket" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.63.0-nightly (ee160f2f5 2022-05-23)" ></div>
 </body></html>
