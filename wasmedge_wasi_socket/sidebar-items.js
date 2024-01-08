@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":["IpAddr","Shutdown","SocketAddr"],"fn":["nslookup"],"mod":["poll","socket"],"struct":["Incoming","Ipv4Addr","Ipv6Addr","TcpListener","TcpStream","UdpSocket"],"trait":["ToSocketAddrs"]};
+window.SIDEBAR_ITEMS = {"enum":["IpAddr","Shutdown","SocketAddr"],"fn":["nslookup","resolve"],"mod":["poll","socket"],"struct":["Incoming","Ipv4Addr","Ipv6Addr","TcpListener","TcpStream","UdpSocket"],"trait":["ToQType","ToSocketAddrs"]};
